@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Employees</h1>
+    <table class="container">
+        <tr>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Contact</th>
+            <th>City</th>
+        </tr>
+        {% for item in page_obj %}
+        <tr> 
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.contact }}</td>
+            <td>{{ item.city }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="pages">
+        {% include "pages.html" %}
+    </div>
+    
+</body>
+</html>
