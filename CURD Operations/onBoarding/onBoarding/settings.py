@@ -55,7 +55,7 @@ ROOT_URLCONF = 'onBoarding.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'employeedb',
         'USER': 'root',
-        'PASSWORD': 'your_pwd',
+        'PASSWORD': '3699',
         'HOST': 'localhost',
         'PORT': '3306',
     }

@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block add_emp %}
+<form method="post" action="{% url 'process_add_emp' %}" class="container" style="background-color: #185875; color: black;">
+    {% for field in form %}
+            {{ field.label }}{{ field }}<br>
+    {% endfor %}
+    <button type="submit">Add</button>
+</form>
+{% endblock %}

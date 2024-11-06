@@ -9,7 +9,7 @@ body {
   background-color: #adabb1;
 }
 
-h1 {
+h1{
   font-size:3em; 
   font-weight: 300;
   line-height:1em;
@@ -41,7 +41,7 @@ h1 {
 	  width: 80%;
 	  margin: 0 auto;
   display: table;
-  padding: 0 0 8em 0;
+  padding: 0 0 3em 0;
 }
 
 .container td, .container th {
@@ -77,13 +77,13 @@ h1 {
   background-color: #FFF842;
   color: #403E10;
   font-weight: bold;
-  
+
   box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
   transform: translate3d(6px, -6px, 0);
-  
+
   transition-delay: 0s;
-	  transition-duration: 0.4s;
-	  transition-property: all;
+    transition-duration: 0.4s;
+    transition-property: all;
   transition-timing-function: line;
 }
 
@@ -93,16 +93,32 @@ h1 {
 }
 
 .pages {
-    text-align: left;
-    width: auto;
-    margin: 0 auto;
-    display: table;
-    padding: 0 0 8em 0;
-    align-items: center;
+  text-align: left;
+  width: auto;
+  margin: 0 auto;
+  display: table;
+  align-items: center;
 }
 
 .pages a{
-    font-size: x-large;
-    padding-inline: 20px;
-    text-decoration: none;
+  font-size: x-large;
+  padding-inline: 20px;
+  text-decoration: none;
+}
+.add_emp {
+  font-size: x-large;
+  padding: 1em;
+  background-color:  #1F2739;
+  color: #adabb1;
+}
+
+.frm {
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: black;
+  border: 24px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }

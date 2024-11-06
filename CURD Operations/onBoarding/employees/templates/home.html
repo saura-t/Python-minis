@@ -1,20 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Employees</h1>
+{% extends 'index.html' %}
+
+{% block home %}
     <table class="container">
         <tr>
             <th>Name</th>
             <th>E-mail</th>
             <th>Contact</th>
             <th>City</th>
+            <th>Action</th>
         </tr>
         {% for item in page_obj %}
         <tr> 
@@ -22,12 +15,16 @@
             <td>{{ item.email }}</td>
             <td>{{ item.contact }}</td>
             <td>{{ item.city }}</td>
+            <td>
+                <button>update</button>
+                <br>
+                <a href="{% url 'delete_emp' item.idemp %}"><button>delete</button></a>
+            </td>
         </tr>
         {% endfor %}
     </table>
     <div class="pages">
         {% include "pages.html" %}
     </div>
-    
-</body>
-</html>
+    <button class="add_emp" onclick="location.href='/add'">Add Employee</button>
+{% endblock %}
