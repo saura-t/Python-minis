@@ -9,6 +9,10 @@ body {
   background-color: #adabb1;
 }
 
+a:link {
+  text-decoration: none!important;
+}
+
 h1{
   font-size:3em; 
   font-weight: 300;
@@ -20,9 +24,9 @@ h1{
 .blue { color: #185875; }
 .yellow { color: #FFF842; }
 
-.container th h1 {
-	  font-weight: bold;
-	  font-size: 1em;
+.container th{
+  font-weight: bold;
+  font-size: 1em;
   text-align: left;
   color: #185875;
 }
