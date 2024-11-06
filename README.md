@@ -1,7 +1,3 @@
-Here's a template for your README file:
-
----
-
 # Python Projects Repository
 
 Welcome to my GitHub repository containing a collection of Python projects and scripts! This repository showcases various small projects designed to demonstrate different aspects of Python programming, ranging from simple automation scripts to web applications using frameworks like Django.
