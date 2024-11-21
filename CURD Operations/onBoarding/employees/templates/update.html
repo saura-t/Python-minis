@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block update_emp %}
+<form method="post" action="../{{ emp.idemp }}/" class="container" style="background-color: #185875; color: black;">
+    <p><label for="name">Name:</label>
+    <input id="name" type="text" value={{emp.name}} name="name"></p>
+    <p><label for="email">Email:</label>
+    <input id="email" type="email" value={{emp.email}} name="email"></p>
+    <p><label for="contact">Contact:</label>
+    <input id="contact" type="text" value={{emp.contact}} name="contact"></p>
+    <p><label for="city">City:</label>
+    <input id="city" type="text" value={{emp.city}} name="city"></p>
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

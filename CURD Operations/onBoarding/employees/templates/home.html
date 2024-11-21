@@ -16,7 +16,7 @@
             <td>{{ item.contact }}</td>
             <td>{{ item.city }}</td>
             <td>
-                <button>update</button>
+                <a href="{% url 'update_emp' item.idemp %}"><button>update</button></a>
                 <br>
                 <a href="{% url 'delete_emp' item.idemp %}"><button>delete</button></a>
             </td>

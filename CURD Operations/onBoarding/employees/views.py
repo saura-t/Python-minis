@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
+from django.template import loader
 
 from .models import Employee
 from .forms import add_employee_form
@@ -61,20 +62,16 @@ def delete_emp(request, idemp):
     return redirect("home")
 
 
+@csrf_exempt
 def update_emp(request, idemp):
     emp = Employee.objects.get(pk=idemp)
-    form = add_employee_form(request.POST or None)
-    if request.method == 'POST':
-        if form.is_valid():
-            name = request.POST.get('name')
-            email = request.POST.get('email')
-            contact = request.POST.get('contact')
-            city = request.POST.get('city')
-
-            emp = Employee(name=name, email=email, contact=contact, city=city)
-            emp.save()
-
-            return redirect("home")
-        return render(request, 'home.html')
-    else:
-        return HttpResponse("Invalid request method.")
+    if request.method == "POST":
+        emp.name = request.POST['name']
+        emp.email = request.POST['email']
+        emp.contact = request.POST['contact']
+        emp.city = request.POST['city']
+        emp.save()
+        return redirect("home")
+    emp = Employee.objects.get(pk=idemp)
+    context = {"emp": emp}
+    return render(request, "update.html", context)
